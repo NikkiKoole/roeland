@@ -61,9 +61,18 @@
 <main>
   <header class:minimal-on-video={isVideoPage}>
     <div class="header-content" class:minimal={isVideoPage}>
-      <div class="header-left hide-mobile" class:hide-on-video={isVideoPage}>
+      <!-- Mobile Hamburger Button - Always visible, shown first on mobile -->
+      {#if $progressStore}
+        <button class="hamburger-button show-mobile" on:click|stopPropagation={toggleMobileMenu} aria-label="Menu">
+          <span class="hamburger-line" class:open={showMobileMenu}></span>
+          <span class="hamburger-line" class:open={showMobileMenu}></span>
+          <span class="hamburger-line" class:open={showMobileMenu}></span>
+        </button>
+      {/if}
+
+      <div class="header-left" class:hide-on-video={isVideoPage}>
         <h1 class="header-title">Roeland Vrolijk</h1>
-        <p class="subtitle hide-medium">Muziekonderwijs Platform</p>
+        <p class="subtitle hide-mobile hide-medium">Muziekonderwijs Platform</p>
       </div>
 
       <!-- Desktop Navigation -->
@@ -110,13 +119,6 @@
             </div>
           {/if}
         </div>
-
-        <!-- Mobile Hamburger Button - Always visible -->
-        <button class="hamburger-button show-mobile" on:click|stopPropagation={toggleMobileMenu} aria-label="Menu">
-          <span class="hamburger-line" class:open={showMobileMenu}></span>
-          <span class="hamburger-line" class:open={showMobileMenu}></span>
-          <span class="hamburger-line" class:open={showMobileMenu}></span>
-        </button>
       {/if}
     </div>
 
@@ -213,6 +215,10 @@
     .header-content {
       gap: 0.75rem;
     }
+
+    .hamburger-button {
+      order: -1;
+    }
   }
 
   .header-left {
@@ -236,17 +242,17 @@
 
   @media (max-width: 768px) {
     h1 {
-      font-size: 1.25rem;
+      font-size: 1.125rem;
     }
 
     .header-title {
-      max-width: 150px;
+      max-width: 180px;
     }
   }
 
-  @media (max-width: 400px) {
-    .header-title {
-      max-width: 120px;
+  @media (max-width: 259px) {
+    .header-left {
+      display: none;
     }
   }
 
