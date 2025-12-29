@@ -5,6 +5,7 @@
 import { progressStore } from "../stores/progressStore.js";
 
 const STORAGE_KEY = "roeland-user-progress";
+const BASE_URL = import.meta.env.BASE_URL;
 
 class DataService {
   constructor() {
@@ -16,7 +17,7 @@ class DataService {
   // ===== COURSES =====
   async loadCourses() {
     if (!this.courses) {
-      const response = await fetch("/data/courses.json");
+      const response = await fetch(`${BASE_URL}data/courses.json`);
       this.courses = await response.json();
     }
     return this.courses;
@@ -48,12 +49,12 @@ class DataService {
       } catch (e) {
         console.error("Error parsing stored progress:", e);
         // Fall back to default
-        const response = await fetch("/data/user-progress.json");
+        const response = await fetch(`${BASE_URL}data/user-progress.json`);
         this.userProgress = await response.json();
       }
     } else {
       // Load default from JSON file
-      const response = await fetch("/data/user-progress.json");
+      const response = await fetch(`${BASE_URL}data/user-progress.json`);
       this.userProgress = await response.json();
     }
 
@@ -152,7 +153,7 @@ class DataService {
   // ===== ACHIEVEMENTS =====
   async loadAchievements() {
     if (!this.achievements) {
-      const response = await fetch("/data/achievements.json");
+      const response = await fetch(`${BASE_URL}data/achievements.json`);
       this.achievements = await response.json();
     }
     return this.achievements;
@@ -248,7 +249,7 @@ class DataService {
       });
 
       // Get quiz to award points
-      const response = await fetch("/data/quizzes.json");
+      const response = await fetch(`${BASE_URL}data/quizzes.json`);
       const quizzesData = await response.json();
       const quiz = quizzesData.quizzes.find((q) => q.id === quizId);
 
