@@ -109,6 +109,10 @@ class DataService {
 
     // Calculate level based on points
     progress.level = Math.floor(progress.points / 100) + 1;
+    console.log("Level calculated after video:", {
+      points: progress.points,
+      level: progress.level,
+    });
 
     // Check for new achievements before saving (pass progress object)
     await this.checkAchievements(progress);
@@ -266,6 +270,10 @@ class DataService {
 
     // Calculate level based on points
     progress.level = Math.floor(progress.points / 100) + 1;
+    console.log("Level calculated after quiz:", {
+      points: progress.points,
+      level: progress.level,
+    });
 
     await this.saveUserProgress(progress);
 

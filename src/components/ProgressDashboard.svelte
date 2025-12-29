@@ -26,7 +26,7 @@
   $: progressPercentage = totalVideos === 0 ? 0 : Math.round((watchedVideos / totalVideos) * 100);
 
   $: currentLevel = userProgress?.level || 1;
-  $: pointsForNextLevel = currentLevel * 100;
+  $: pointsForNextLevel = 100; // Always 100 points per level
   $: pointsForPreviousLevel = (currentLevel - 1) * 100;
   $: pointsInCurrentLevel = totalPoints - pointsForPreviousLevel;
   $: levelProgress = Math.min(Math.round((pointsInCurrentLevel / pointsForNextLevel) * 100), 100);
