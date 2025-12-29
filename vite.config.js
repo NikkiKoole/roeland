@@ -7,5 +7,6 @@ export default defineConfig(({ command }) => {
   return {
     plugins: [svelte()],
     base,
+    publicDir: "public",
   };
 });
