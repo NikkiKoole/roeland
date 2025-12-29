@@ -134,6 +134,15 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem;
+    overflow-x: hidden;
+  }
+
+  @media (max-width: 768px) {
+    .dashboard {
+      padding: 1rem;
+      width: 100%;
+      max-width: 100vw;
+    }
   }
 
   .dashboard-header {
@@ -141,12 +150,29 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 2rem;
+    gap: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    .dashboard-header {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 1.5rem;
+    }
   }
 
   h2 {
     font-size: 2rem;
-    margin: 0;
+    margin-bottom: 20px;
     color: #333;
+  }
+
+  @media (max-width: 768px) {
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      padding: 0;
+    }
   }
 
   .btn-clear {
@@ -167,27 +193,53 @@
   }
 
   h3 {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     margin-bottom: 1rem;
-    color: #555;
+    color: #2c5f7c;
+  }
+
+  @media (max-width: 768px) {
+    h3 {
+      font-size: 1.25rem;
+      margin-bottom: 0.75rem;
+      padding: 0;
+    }
   }
 
   .stats-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
     margin-bottom: 2rem;
+    width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    .stats-grid {
+      grid-template-columns: 1fr;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
   }
 
   .stat-card {
     background: white;
     border-radius: 12px;
     padding: 1.5rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
     gap: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s;
+  }
+
+  @media (max-width: 768px) {
+    .stat-card {
+      border-radius: 8px;
+      padding: 1.25rem;
+      gap: 1rem;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+    }
   }
 
   .stat-card:hover {
@@ -202,6 +254,12 @@
 
   .stat-icon {
     font-size: 3rem;
+  }
+
+  @media (max-width: 768px) {
+    .stat-icon {
+      font-size: 2.5rem;
+    }
   }
 
   .stat-content {
@@ -224,6 +282,12 @@
     margin-bottom: 0.2rem;
   }
 
+  @media (max-width: 768px) {
+    .stat-value {
+      font-size: 1.75rem;
+    }
+  }
+
   .stat-sublabel {
     font-size: 0.85rem;
     opacity: 0.7;
@@ -235,6 +299,17 @@
     padding: 1.5rem;
     margin-bottom: 2rem;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    .progress-section {
+      border-radius: 8px;
+      padding: 1.25rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+    }
   }
 
   .progress-bar {
@@ -243,6 +318,14 @@
     border-radius: 15px;
     overflow: hidden;
     margin: 1rem 0 0.5rem 0;
+  }
+
+  @media (max-width: 768px) {
+    .progress-bar {
+      height: 24px;
+      border-radius: 12px;
+      margin: 0.75rem 0 0.5rem 0;
+    }
   }
 
   .progress-fill {
@@ -273,12 +356,30 @@
 
   .achievements-section {
     margin-bottom: 2rem;
+    overflow-x: hidden;
+  }
+
+  @media (max-width: 768px) {
+    .achievements-section {
+      margin-bottom: 1rem;
+      width: 100%;
+    }
   }
 
   .achievements-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 1rem;
+    width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    .achievements-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+      padding: 0;
+      width: 100%;
+    }
   }
 
   .achievement-card {
@@ -288,6 +389,20 @@
     text-align: center;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s;
+    min-width: 0;
+    overflow: hidden;
+  }
+
+  @media (max-width: 768px) {
+    .achievement-card {
+      border-radius: 8px;
+      padding: 0.875rem;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+      min-height: 180px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
   }
 
   .achievement-card.unlocked {
@@ -308,21 +423,46 @@
     margin-bottom: 0.5rem;
   }
 
+  @media (max-width: 768px) {
+    .achievement-icon {
+      font-size: 2.5rem;
+      margin-bottom: 0.375rem;
+    }
+  }
+
   .locked-icon {
     opacity: 0.5;
   }
 
   .achievement-name {
     font-weight: bold;
-    font-size: 1.1rem;
+    font-size: 1rem;
     margin-bottom: 0.5rem;
-    color: #333;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+
+  @media (max-width: 768px) {
+    .achievement-name {
+      font-size: 0.9375rem;
+      line-height: 1.3;
+    }
   }
 
   .achievement-description {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     color: #666;
-    margin-bottom: 0.5rem;
+    line-height: 1.4;
+    word-wrap: break-word;
+  }
+
+  @media (max-width: 768px) {
+    .achievement-description {
+      font-size: 0.8125rem;
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
   }
 
   .achievement-points {

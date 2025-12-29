@@ -69,8 +69,11 @@
         <h3>Persoonlijke Informatie</h3>
 
         <div class="avatar-section">
-          <div class="current-avatar">
-            <span class="avatar-large">{avatar}</span>
+          <div class="current-avatar-container">
+            <label>Huidige Avatar</label>
+            <div class="current-avatar">
+              <span class="avatar-large">{avatar}</span>
+            </div>
           </div>
 
           <div class="avatar-picker">
@@ -192,6 +195,13 @@
     max-width: 900px;
     margin: 0 auto;
     padding: 2rem;
+    overflow-x: hidden;
+  }
+
+  @media (max-width: 768px) {
+    .profile-page {
+      padding: 1rem;
+    }
   }
 
   .profile-header {
@@ -202,6 +212,12 @@
     margin: 0 0 0.5rem 0;
     color: var(--primary-color);
     font-size: 2rem;
+  }
+
+  @media (max-width: 768px) {
+    .profile-header h2 {
+      font-size: 1.5rem;
+    }
   }
 
   .subtitle {
@@ -216,10 +232,25 @@
     box-shadow: var(--shadow);
     margin-bottom: 1.5rem;
     border: 1px solid var(--border);
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  @media (max-width: 768px) {
+    .profile-card {
+      border-radius: 0.5rem;
+      margin-bottom: 1rem;
+    }
   }
 
   .card-section {
     padding: 2rem;
+  }
+
+  @media (max-width: 768px) {
+    .card-section {
+      padding: 1.25rem;
+    }
   }
 
   .card-section h3 {
@@ -241,16 +272,40 @@
 
   .avatar-section {
     display: flex;
-    gap: 2rem;
+    flex-direction: column;
+    gap: 1.5rem;
     margin-bottom: 2rem;
     padding-bottom: 2rem;
     border-bottom: 1px solid var(--border);
+  }
+
+  @media (min-width: 769px) {
+    .avatar-section {
+      flex-direction: row;
+      gap: 2rem;
+    }
+  }
+
+  .current-avatar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .current-avatar-container label {
+    font-weight: 600;
+    color: var(--text-primary);
   }
 
   .current-avatar {
     display: flex;
     align-items: center;
     justify-content: center;
+    background: var(--background);
+    border-radius: 0.75rem;
+    padding: 1rem;
+    border: 2px solid var(--border);
   }
 
   .avatar-large {
@@ -271,8 +326,22 @@
 
   .avatar-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(3rem, 1fr));
+    grid-template-columns: repeat(6, 1fr);
     gap: 0.5rem;
+    max-width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    .avatar-grid {
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0.625rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .avatar-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
   }
 
   .avatar-option {
@@ -283,6 +352,17 @@
     background: var(--background);
     cursor: pointer;
     transition: all 0.2s ease;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media (max-width: 768px) {
+    .avatar-option {
+      font-size: 1.75rem;
+      padding: 0.375rem;
+    }
   }
 
   .avatar-option:hover {
@@ -337,6 +417,13 @@
     display: flex;
     gap: 1rem;
     margin-top: 2rem;
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: 768px) {
+    .actions {
+      flex-direction: column;
+    }
   }
 
   .btn-primary, .btn-secondary, .btn-danger {
@@ -347,6 +434,15 @@
     cursor: pointer;
     transition: all 0.2s ease;
     border: none;
+    min-height: 44px;
+  }
+
+  @media (max-width: 768px) {
+    .btn-primary, .btn-secondary, .btn-danger {
+      width: 100%;
+      padding: 1rem 1.5rem;
+      min-height: 56px;
+    }
   }
 
   .btn-primary {
@@ -466,6 +562,19 @@
     background: var(--background);
     border-radius: 0.5rem;
     margin-bottom: 1rem;
+    gap: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    .action-item {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 1rem;
+    }
+
+    .action-item button {
+      width: 100%;
+    }
   }
 
   .action-info strong {

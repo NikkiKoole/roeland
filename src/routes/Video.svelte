@@ -1,6 +1,7 @@
 <script>
   import { onMount } from 'svelte';
   import { push } from 'svelte-spa-router';
+  import { fade, fly } from 'svelte/transition';
   import VideoPlayer from '../components/VideoPlayer.svelte';
   import dataService from '../services/dataService.js';
 
@@ -92,7 +93,10 @@
   </div>
 {:else if video && course && chapter}
   {#if showSuccess}
-    <div class="success-banner">
+    <div
+      class="success-banner"
+      transition:fly="{{ y: -20, duration: 300 }}"
+    >
       ✅ Video voltooid! +{video.points} punten verdiend!
     </div>
   {/if}
@@ -147,17 +151,20 @@
     font-weight: 600;
     font-size: 1.1rem;
     z-index: 1000;
-    animation: slideDown 0.3s ease;
+    max-width: 90%;
+    text-align: center;
   }
 
-  @keyframes slideDown {
-    from {
-      transform: translateX(-50%) translateY(-20px);
-      opacity: 0;
-    }
-    to {
-      transform: translateX(-50%) translateY(0);
-      opacity: 1;
+  @media (max-width: 768px) {
+    .success-banner {
+      top: 4.5rem;
+      left: 1rem;
+      right: 1rem;
+      transform: none;
+      padding: 1rem;
+      font-size: 0.9375rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     }
   }
 </style>

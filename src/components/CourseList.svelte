@@ -182,6 +182,14 @@
 <style>
   .course-list {
     padding: 20px;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  @media (max-width: 768px) {
+    .course-list {
+      padding: 0;
+    }
   }
 
   h2 {
@@ -190,12 +198,31 @@
     color: #333;
   }
 
+  @media (max-width: 768px) {
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      padding: 0 1rem;
+    }
+  }
+
   .course-card {
     background: white;
     border-radius: 12px;
     padding: 24px;
     margin-bottom: 24px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  @media (max-width: 768px) {
+    .course-card {
+      border-radius: 0;
+      padding: 1.25rem 1rem;
+      margin-bottom: 0.5rem;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
   }
 
   .course-header h3 {
@@ -204,10 +231,23 @@
     color: #2c3e50;
   }
 
+  @media (max-width: 768px) {
+    .course-header h3 {
+      font-size: 1.25rem;
+    }
+  }
+
   .course-description {
     color: #666;
     margin-bottom: 16px;
     line-height: 1.5;
+  }
+
+  @media (max-width: 768px) {
+    .course-description {
+      font-size: 0.9375rem;
+      margin-bottom: 12px;
+    }
   }
 
   .progress-bar {
@@ -235,14 +275,33 @@
     margin-top: 24px;
   }
 
+  @media (max-width: 768px) {
+    .chapters {
+      margin-top: 1rem;
+    }
+  }
+
   .chapter {
     margin-bottom: 24px;
+  }
+
+  @media (max-width: 768px) {
+    .chapter {
+      margin-bottom: 1.5rem;
+    }
   }
 
   .chapter h4 {
     font-size: 1.125rem;
     margin-bottom: 12px;
     color: #444;
+  }
+
+  @media (max-width: 768px) {
+    .chapter h4 {
+      font-size: 1rem;
+      margin-bottom: 0.75rem;
+    }
   }
 
   .video-list {
@@ -253,6 +312,12 @@
 
   .video-item {
     margin-bottom: 8px;
+  }
+
+  @media (max-width: 768px) {
+    .video-item {
+      margin-bottom: 0.5rem;
+    }
   }
 
   .video-button {
@@ -267,6 +332,29 @@
     cursor: pointer;
     transition: all 0.2s ease;
     font-size: 1rem;
+    min-height: 44px;
+  }
+
+  @media (max-width: 768px) {
+    .video-button {
+      padding: 1rem 0.875rem;
+      gap: 0.75rem;
+      font-size: 0.9375rem;
+      border-radius: 0.5rem;
+      min-height: 64px;
+      display: grid;
+      grid-template-columns: auto 1fr auto auto;
+      grid-template-rows: auto auto;
+      align-items: center;
+    }
+
+    .video-button:hover:not(:disabled) {
+      transform: none;
+    }
+
+    .video-button:active:not(:disabled) {
+      background: #e0e0e0;
+    }
   }
 
   .video-button:hover:not(:disabled) {
@@ -306,12 +394,37 @@
     justify-content: center;
   }
 
+  @media (max-width: 768px) {
+    .video-status {
+      font-size: 1.5rem;
+      min-width: 2rem;
+      grid-column: 1;
+      grid-row: 1 / 3;
+    }
+  }
+
   .video-title {
     flex: 1;
     text-align: left;
     font-weight: 500;
     color: #333;
     transition: color 0.2s ease;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+
+  @media (max-width: 768px) {
+    .video-title {
+      font-size: 0.9375rem;
+      line-height: 1.4;
+      grid-column: 2 / 5;
+      grid-row: 1;
+      -webkit-line-clamp: 2;
+      margin-bottom: 0.25rem;
+    }
   }
 
   .video-duration {
@@ -322,6 +435,15 @@
     padding: 0.25rem 0.5rem;
     background: rgba(0, 0, 0, 0.05);
     border-radius: 0.25rem;
+  }
+
+  @media (max-width: 768px) {
+    .video-duration {
+      font-size: 0.8125rem;
+      padding: 0.375rem 0.5rem;
+      grid-column: 3;
+      grid-row: 2;
+    }
   }
 
   .video-button.watched .video-duration {
@@ -339,6 +461,15 @@
     flex-shrink: 0;
   }
 
+  @media (max-width: 768px) {
+    .video-points {
+      font-size: 0.75rem;
+      padding: 0.375rem 0.5rem;
+      grid-column: 4;
+      grid-row: 2;
+    }
+  }
+
   /* Quiz Button Styles */
   .quiz-button {
     width: 100%;
@@ -353,6 +484,27 @@
     cursor: pointer;
     transition: all 0.2s ease;
     font-size: 1rem;
+    min-height: 44px;
+  }
+
+  @media (max-width: 768px) {
+    .quiz-button {
+      padding: 1.25rem 1rem;
+      gap: 0.875rem;
+      margin-top: 0.75rem;
+      font-size: 0.9375rem;
+      min-height: 80px;
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
+
+    .quiz-button:hover:not(:disabled) {
+      transform: none;
+    }
+
+    .quiz-button:active:not(:disabled) {
+      opacity: 0.8;
+    }
   }
 
   .quiz-button:hover:not(:disabled) {
@@ -389,18 +541,39 @@
     flex-shrink: 0;
   }
 
+  @media (max-width: 768px) {
+    .quiz-icon {
+      font-size: 2rem;
+    }
+  }
+
   .quiz-content {
     flex: 1;
     display: flex;
     flex-direction: column;
     gap: 0.25rem;
     text-align: left;
+    min-width: 0;
   }
 
   .quiz-title {
     font-weight: 600;
     color: var(--text-primary);
     font-size: 1rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  @media (max-width: 768px) {
+    .quiz-title {
+      font-size: 0.9375rem;
+      white-space: normal;
+      overflow: visible;
+      text-overflow: clip;
+      flex-basis: 100%;
+      line-height: 1.3;
+    }
   }
 
   .quiz-meta {
@@ -409,6 +582,15 @@
     gap: 0.5rem;
     font-size: 0.8125rem;
     color: var(--text-secondary);
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: 768px) {
+    .quiz-meta {
+      font-size: 0.8125rem;
+      flex-basis: 100%;
+      margin-top: 0.25rem;
+    }
   }
 
   .quiz-points {
@@ -426,6 +608,13 @@
     font-style: italic;
   }
 
+  @media (max-width: 768px) {
+    .quiz-locked-text {
+      font-size: 0.8125rem;
+      line-height: 1.4;
+    }
+  }
+
   .quiz-score {
     font-size: 1.125rem;
     font-weight: 700;
@@ -433,5 +622,13 @@
     padding: 0.25rem 0.75rem;
     background: rgba(107, 158, 120, 0.2);
     border-radius: 0.25rem;
+    flex-shrink: 0;
+  }
+
+  @media (max-width: 768px) {
+    .quiz-score {
+      font-size: 1rem;
+      padding: 0.375rem 0.625rem;
+    }
   }
 </style>
