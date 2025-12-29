@@ -502,11 +502,10 @@
     background: var(--primary-color);
     border-radius: 2px;
     transition: all 0.3s ease;
-    transform-origin: center;
   }
 
   .hamburger-line.open:nth-child(1) {
-    transform: rotate(45deg) translate(0.5rem, 0.5rem);
+    transform: rotate(45deg) translate(6px, 6px);
   }
 
   .hamburger-line.open:nth-child(2) {
@@ -514,7 +513,7 @@
   }
 
   .hamburger-line.open:nth-child(3) {
-    transform: rotate(-45deg) translate(0.5rem, -0.5rem);
+    transform: rotate(-45deg) translate(6px, -8px);
   }
 
   /* Mobile Menu */

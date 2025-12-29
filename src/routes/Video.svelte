@@ -1,7 +1,7 @@
 <script>
   import { onMount } from 'svelte';
   import { push } from 'svelte-spa-router';
-  import { fade, fly } from 'svelte/transition';
+  import { fly } from 'svelte/transition';
   import VideoPlayer from '../components/VideoPlayer.svelte';
   import dataService from '../services/dataService.js';
 
