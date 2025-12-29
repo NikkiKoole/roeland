@@ -1,0 +1,21 @@
+{
+  "userId": "default-user",
+  "username": "Muziekdocent",
+  "email": "docent@voorbeeld.nl",
+  "avatar": "👨‍🎓",
+  "points": 0,
+  "level": 1,
+  "completedVideos": [],
+  "completedQuizzes": [],
+  "unlockedContent": [],
+  "earnedAchievements": [],
+  "videoProgress": {},
+  "lastActive": null,
+  "stats": {
+    "totalVideosWatched": 0,
+    "totalQuizzesPassed": 0,
+    "totalTimeSpent": 0,
+    "currentStreak": 0,
+    "longestStreak": 0
+  }
+}

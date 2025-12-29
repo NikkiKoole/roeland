@@ -1,0 +1,102 @@
+{
+  "achievements": [
+    {
+      "id": "first-video",
+      "name": "Eerste Stappen",
+      "description": "Bekijk je eerste video",
+      "icon": "🎵",
+      "points": 10,
+      "condition": {
+        "type": "videos_watched",
+        "count": 1
+      }
+    },
+    {
+      "id": "five-videos",
+      "name": "Goed Bezig",
+      "description": "Bekijk 5 video's",
+      "icon": "🎶",
+      "points": 50,
+      "condition": {
+        "type": "videos_watched",
+        "count": 5
+      }
+    },
+    {
+      "id": "complete-course",
+      "name": "Cursus Voltooid",
+      "description": "Voltooi je eerste cursus",
+      "icon": "⭐",
+      "points": 100,
+      "condition": {
+        "type": "courses_completed",
+        "count": 1
+      }
+    },
+    {
+      "id": "all-courses",
+      "name": "Meesterdocent",
+      "description": "Voltooi alle cursussen",
+      "icon": "🏆",
+      "points": 500,
+      "condition": {
+        "type": "courses_completed",
+        "count": "all"
+      }
+    },
+    {
+      "id": "early-bird",
+      "name": "Ochtendmens",
+      "description": "Begin in de ochtend met leren",
+      "icon": "🌅",
+      "points": 25,
+      "condition": {
+        "type": "time_of_day",
+        "hours": [6, 7, 8, 9, 10]
+      }
+    },
+    {
+      "id": "consistent-learner",
+      "name": "Doorzetter",
+      "description": "Bekijk video's op 3 verschillende dagen",
+      "icon": "📅",
+      "points": 75,
+      "condition": {
+        "type": "days_active",
+        "count": 3
+      }
+    }
+  ],
+  "levels": [
+    {
+      "level": 1,
+      "name": "Beginner",
+      "pointsRequired": 0,
+      "icon": "🌱"
+    },
+    {
+      "level": 2,
+      "name": "Leerling",
+      "pointsRequired": 100,
+      "icon": "📚"
+    },
+    {
+      "level": 3,
+      "name": "Beoefenaar",
+      "pointsRequired": 300,
+      "icon": "🎼"
+    },
+    {
+      "level": 4,
+      "name": "Expert",
+      "pointsRequired": 600,
+      "icon": "🎓"
+    },
+    {
+      "level": 5,
+      "name": "Meester",
+      "pointsRequired": 1000,
+      "icon": "👑"
+    }
+  ]
+}

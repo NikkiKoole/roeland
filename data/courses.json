@@ -1,0 +1,169 @@
+{
+  "courses": [
+    {
+      "id": "course-1",
+      "title": "Basis Muziekonderwijs",
+      "description": "Leer de kernprincipes van muziekonderwijs aan basisschoolkinderen",
+      "thumbnail": "🎵",
+      "requiredPoints": 0,
+      "chapters": [
+        {
+          "id": "chapter-1-1",
+          "title": "Introductie Muziekonderwijs",
+          "description": "De basis van muziekles geven aan jonge leerlingen",
+          "videos": [
+            {
+              "id": "video-1-1-1",
+              "title": "Waarom Muziekonderwijs Belangrijk Is",
+              "youtubeId": "dQw4w9WgXcQ",
+              "duration": "5:30",
+              "description": "Ontdek het belang van muziekonderwijs voor kinderontwikkeling en hoe het cognitieve, emotionele en sociale groei beïnvloedt",
+              "points": 10
+            },
+            {
+              "id": "video-1-1-2",
+              "title": "Een Muzikale Klasomgeving Creëren",
+              "youtubeId": "9bZkp7q19f0",
+              "duration": "8:45",
+              "description": "Hoe je je klas inricht voor optimaal muziekonderwijs, inclusief ruimte-indeling en middelenbeheer",
+              "points": 10
+            },
+            {
+              "id": "video-1-1-3",
+              "title": "Leeftijdsgeschikte Muziekactiviteiten",
+              "youtubeId": "kJQP7kiw5Fk",
+              "duration": "7:20",
+              "description": "Ontwikkelingsfasen begrijpen en passende muziekactiviteiten kiezen voor verschillende leeftijdsgroepen",
+              "points": 10
+            }
+          ]
+        },
+        {
+          "id": "chapter-1-2",
+          "title": "Ritme en Beweging",
+          "description": "Ritme aanleren door beweging en spel",
+          "videos": [
+            {
+              "id": "video-1-2-1",
+              "title": "Basis Ritme-oefeningen voor Kinderen",
+              "youtubeId": "L_XJ_s5IsQc",
+              "duration": "10:20",
+              "description": "Eenvoudige ritmeactiviteiten en oefeningen die jonge kinderen betrekken en fundamentele timing-vaardigheden opbouwen",
+              "points": 15
+            },
+            {
+              "id": "video-1-2-2",
+              "title": "Bewegingsspelen voor Ritme-ontwikkeling",
+              "youtubeId": "M7lc1UVf-VE",
+              "duration": "12:15",
+              "description": "Boeiende bewegingsactiviteiten die ritmische concepten aanleren door spel en lichamelijke expressie",
+              "points": 15
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course-2",
+      "title": "Zingen met Kinderen",
+      "description": "Technieken en methoden voor het aanleren van vocale vaardigheden aan jonge leerlingen",
+      "thumbnail": "🎤",
+      "requiredPoints": 50,
+      "chapters": [
+        {
+          "id": "chapter-2-1",
+          "title": "Vocale Basis voor Kinderen",
+          "description": "De stemmen van kinderen begrijpen en vocale ontwikkeling",
+          "videos": [
+            {
+              "id": "video-2-1-1",
+              "title": "De Vocale Ontwikkeling van Kinderen Begrijpen",
+              "youtubeId": "y6Sxv-sUYtM",
+              "duration": "9:30",
+              "description": "Leer hoe kinderstemmen zich ontwikkelen en rijpen, en hoe je werkt met verschillende stembereiken",
+              "points": 20
+            },
+            {
+              "id": "video-2-1-2",
+              "title": "Opwarmoefeningen voor Jonge Stemmen",
+              "youtubeId": "0j2jMa0WlMs",
+              "duration": "7:45",
+              "description": "Veilige en leuke vocale opwarmoefeningen speciaal ontworpen voor ontwikkelende kinderstemmen",
+              "points": 20
+            }
+          ]
+        },
+        {
+          "id": "chapter-2-2",
+          "title": "Liedselectie en Lesmethoden",
+          "description": "Effectief leeftijdsgeschikte liedjes kiezen en aanleren",
+          "videos": [
+            {
+              "id": "video-2-2-1",
+              "title": "Leeftijdsgeschikte Liedjes Selecteren",
+              "youtubeId": "rXU5t16OGzg",
+              "duration": "11:00",
+              "description": "Hoe je liedjes kiest die passen bij de vaardigheden, interesses en ontwikkelingsniveaus van je leerlingen",
+              "points": 20
+            },
+            {
+              "id": "video-2-2-2",
+              "title": "Stap voor Stap een Nieuw Liedje Aanleren",
+              "youtubeId": "lYIRO97dhII",
+              "duration": "13:30",
+              "description": "Effectieve methoden en strategieën voor het aanleren van nieuwe liedjes aan kinderen, inclusief herhalingstechnieken",
+              "points": 20
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course-3",
+      "title": "Klasinstrumenten",
+      "description": "Effectief instrumenten gebruiken in de basisschoolklas",
+      "thumbnail": "🥁",
+      "requiredPoints": 150,
+      "chapters": [
+        {
+          "id": "chapter-3-1",
+          "title": "Introductie tot Klasinstrumenten",
+          "description": "Overzicht van percussie en eenvoudige instrumenten voor in de klas",
+          "videos": [
+            {
+              "id": "video-3-1-1",
+              "title": "Essentiële Klasinstrumenten voor Elke Docent",
+              "youtubeId": "jNQXAC9IVRw",
+              "duration": "8:20",
+              "description": "Een uitgebreide gids voor basisinstrumenten die elke muziekklas zou moeten hebben, van tamboerijnen tot xylofoons",
+              "points": 25
+            },
+            {
+              "id": "video-3-1-2",
+              "title": "Instrumentverzorging en Klasmanagement",
+              "youtubeId": "oHg5SJYRHA0",
+              "duration": "6:40",
+              "description": "Kinderen leren om klasinstrumenten te respecteren, verzorgen en correct te gebruiken",
+              "points": 25
+            }
+          ]
+        },
+        {
+          "id": "chapter-3-2",
+          "title": "Percussie en Ritme-instrumenten",
+          "description": "Werken met drums, shakers en ritme-instrumenten",
+          "videos": [
+            {
+              "id": "video-3-2-1",
+              "title": "Introductie tot Percussie voor Kinderen",
+              "youtubeId": "DLzxrzFCyOs",
+              "duration": "10:15",
+              "description": "Basis percussietechnieken en ritmepatronen aanleren met eenvoudige klasinstrumenten",
+              "points": 25
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

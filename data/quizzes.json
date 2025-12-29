@@ -1,0 +1,206 @@
+{
+  "quizzes": [
+    {
+      "id": "quiz-1-1",
+      "courseId": "course-1",
+      "chapterId": "chapter-1-1",
+      "title": "Quiz: Introductie Muziekonderwijs",
+      "description": "Test je kennis over de basis van muziekonderwijs",
+      "unlockRequirement": {
+        "type": "all-videos"
+      },
+      "points": 20,
+      "passingScore": 70,
+      "questions": [
+        {
+          "id": "q1-1-1",
+          "type": "multiple-choice",
+          "question": "Welke van de volgende gebieden wordt NIET beïnvloed door muziekonderwijs?",
+          "options": [
+            "Cognitieve ontwikkeling",
+            "Emotionele ontwikkeling",
+            "Sociale ontwikkeling",
+            "Financiële ontwikkeling"
+          ],
+          "correctAnswer": 3,
+          "explanation": "Muziekonderwijs heeft vooral impact op cognitieve, emotionele en sociale ontwikkeling, niet direct op financiële ontwikkeling."
+        },
+        {
+          "id": "q1-1-2",
+          "type": "multiple-choice",
+          "question": "Wat is het belangrijkste bij het inrichten van een muzikale klasomgeving?",
+          "options": [
+            "Dure instrumenten",
+            "Grote ruimte",
+            "Toegankelijkheid en veiligheid",
+            "Professionele geluidsapparatuur"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Toegankelijkheid en veiligheid zijn het belangrijkst. Kinderen moeten zich veilig voelen en eenvoudig bij instrumenten kunnen."
+        },
+        {
+          "id": "q1-1-3",
+          "type": "text-input",
+          "question": "Muziek maken in groepen leert kinderen vooral wat te doen?",
+          "correctAnswers": ["samenwerken", "samenwerking"],
+          "caseSensitive": false,
+          "explanation": "Muziek maken in groepen leert kinderen samenwerken, naar elkaar luisteren en communiceren - allemaal belangrijke sociale vaardigheden."
+        }
+      ]
+    },
+    {
+      "id": "quiz-1-2",
+      "courseId": "course-1",
+      "chapterId": "chapter-1-2",
+      "title": "Quiz: Ritme en Beweging",
+      "description": "Toets je begrip van ritme-oefeningen en bewegingsspelen",
+      "unlockRequirement": {
+        "type": "specific-video",
+        "videoId": "video-1-2-2"
+      },
+      "points": 25,
+      "passingScore": 70,
+      "questions": [
+        {
+          "id": "q1-2-1",
+          "type": "multiple-choice",
+          "question": "Waarom zijn bewegingsspelen belangrijk bij het aanleren van ritme?",
+          "options": [
+            "Ze zijn makkelijker te organiseren",
+            "Kinderen verbinden fysieke beweging met muzikale concepten",
+            "Ze kosten geen geld",
+            "Ze zijn rustiger dan andere activiteiten"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Bewegingsspelen helpen kinderen om muzikale concepten zoals ritme fysiek te ervaren en te internaliseren."
+        },
+        {
+          "id": "q1-2-2",
+          "type": "text-input",
+          "question": "De constante, regelmatige slag in muziek noemen we de...?",
+          "correctAnswers": ["beat", "puls"],
+          "caseSensitive": false,
+          "explanation": "De beat of puls is het fundamentele element - een constante, regelmatige slag die de basis vormt voor alle ritme."
+        },
+        {
+          "id": "q1-2-3",
+          "type": "multiple-choice",
+          "question": "Welke leeftijdsgroep profiteert het MEEST van bewegingsspelen bij ritme-onderwijs?",
+          "options": [
+            "Alleen peuters (2-4 jaar)",
+            "Alleen kleuters (4-6 jaar)",
+            "Alle basisschoolleeftijden",
+            "Alleen bovenbouw (10-12 jaar)"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Bewegingsspelen zijn effectief voor alle leeftijden in het basisonderwijs, aangepast aan het niveau."
+        }
+      ]
+    },
+    {
+      "id": "quiz-2-1",
+      "courseId": "course-2",
+      "chapterId": "chapter-2-1",
+      "title": "Quiz: Vocale Basis voor Kinderen",
+      "description": "Test je kennis over kinderstemmen en vocale ontwikkeling",
+      "unlockRequirement": {
+        "type": "all-videos"
+      },
+      "points": 30,
+      "passingScore": 70,
+      "questions": [
+        {
+          "id": "q2-1-1",
+          "type": "multiple-choice",
+          "question": "Wat is het normale stembereik voor kinderen in de basisschoolleeftijd?",
+          "options": [
+            "Hetzelfde als volwassenen",
+            "Hoger en smaller dan volwassenen",
+            "Lager en breder dan volwassenen",
+            "Er is geen verschil"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Kinderstemmen zijn hoger en hebben een smaller bereik dan volwassen stemmen. Dit ontwikkelt zich tijdens de groei."
+        },
+        {
+          "id": "q2-1-2",
+          "type": "text-input",
+          "question": "Opwarmoefeningen helpen schade aan welk onderdeel van het lichaam te voorkomen?",
+          "correctAnswers": ["stembanden", "stem"],
+          "caseSensitive": false,
+          "explanation": "Opwarmoefeningen helpen de stem voorzichtig voor te bereiden en voorkomen belasting of schade aan de jonge, ontwikkelende stembanden."
+        },
+        {
+          "id": "q2-1-3",
+          "type": "multiple-choice",
+          "question": "Hoe lang mag een zangles voor jonge kinderen (groep 1-3) maximaal duren?",
+          "options": [
+            "10-15 minuten",
+            "20-30 minuten",
+            "45-60 minuten",
+            "Meer dan een uur"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Voor jonge kinderen is 20-30 minuten ideaal. Langer kan leiden tot concentratieverlies en vermoeidheid van de stem."
+        }
+      ]
+    },
+    {
+      "id": "quiz-3-1",
+      "courseId": "course-3",
+      "chapterId": "chapter-3-1",
+      "title": "Quiz: Klasinstrumenten",
+      "description": "Toets je kennis over instrumenten in de muziekles",
+      "unlockRequirement": {
+        "type": "specific-video",
+        "videoId": "video-3-1-2"
+      },
+      "points": 35,
+      "passingScore": 70,
+      "questions": [
+        {
+          "id": "q3-1-1",
+          "type": "text-input",
+          "question": "Een driehoekig metalen slaginstrument noemen we een...?",
+          "correctAnswers": ["triangel"],
+          "caseSensitive": false,
+          "explanation": "De triangel is een driehoekig metalen percussie-instrument dat perfect geschikt is voor jonge kinderen."
+        },
+        {
+          "id": "q3-1-2",
+          "type": "multiple-choice",
+          "question": "Wat is de belangrijkste regel bij instrumentverzorging?",
+          "options": [
+            "Instrumenten elke dag poetsen",
+            "Instrumenten altijd op slot bewaren",
+            "Kinderen leren respectvol met instrumenten om te gaan",
+            "Alleen de leraar mag instrumenten aanraken"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Het aanleren van respect en zorgvuldig gebruik is fundamenteel. Kinderen moeten leren hoe ze instrumenten goed behandelen."
+        },
+        {
+          "id": "q3-1-3",
+          "type": "multiple-choice",
+          "question": "Welk Orff-instrument wordt het meest gebruikt in het basisonderwijs?",
+          "options": [
+            "Marimba",
+            "Xylofoon",
+            "Glockenspiel",
+            "Alle bovenstaande"
+          ],
+          "correctAnswer": 3,
+          "explanation": "Alle drie zijn veel gebruikte Orff-instrumenten in het basisonderwijs. Elk heeft zijn eigen klankkwaliteit en toepassingen."
+        },
+        {
+          "id": "q3-1-4",
+          "type": "text-input",
+          "question": "Bij ongestemde percussie focussen kinderen zich vooral op...?",
+          "correctAnswers": ["ritme"],
+          "caseSensitive": false,
+          "explanation": "Ongestemde percussie is toegankelijker omdat kinderen zich kunnen focussen op ritme zonder zich zorgen te maken over de juiste toonhoogte."
+        }
+      ]
+    }
+  ]
+}

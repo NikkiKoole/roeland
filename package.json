@@ -1,0 +1,26 @@
+{
+  "name": "music-teacher-training",
+  "private": true,
+  "version": "0.0.1",
+  "description": "A gamified learning platform for teaching primary school teachers how to be better music educators",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:run": "vitest run"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^3.0.0",
+    "@testing-library/svelte": "^4.2.3",
+    "jsdom": "^23.2.0",
+    "svelte": "^4.2.0",
+    "vite": "^5.0.0",
+    "vitest": "^1.6.1"
+  },
+  "dependencies": {
+    "svelte-spa-router": "^4.0.1"
+  }
+}
