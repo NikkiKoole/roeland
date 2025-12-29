@@ -4,6 +4,8 @@
   import CourseList from '../components/CourseList.svelte';
   import dataService from '../services/dataService.js';
 
+  const BASE_URL = import.meta.env.BASE_URL || "/";
+
   let courses = [];
   let userProgress = null;
   let quizzes = [];
@@ -22,7 +24,7 @@
 
     // Load quizzes
     try {
-      const response = await fetch('/data/quizzes.json');
+      const response = await fetch(`${BASE_URL}data/quizzes.json`);
       const quizzesData = await response.json();
       quizzes = quizzesData.quizzes;
     } catch (error) {

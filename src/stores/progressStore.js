@@ -1,4 +1,6 @@
-import { writable } from 'svelte/store';
+import { writable } from "svelte/store";
+
+const BASE_URL = import.meta.env.BASE_URL || "/";
 
 function createProgressStore() {
   const { subscribe, set, update } = writable(null);
@@ -10,18 +12,18 @@ function createProgressStore() {
 
     // Initialize from localStorage or default
     async init() {
-      const stored = localStorage.getItem('roeland-user-progress');
+      const stored = localStorage.getItem("roeland-user-progress");
       if (stored) {
         try {
           set(JSON.parse(stored));
         } catch (e) {
-          console.error('Error parsing stored progress:', e);
-          const response = await fetch('/data/user-progress.json');
+          console.error("Error parsing stored progress:", e);
+          const response = await fetch(`${BASE_URL}data/user-progress.json`);
           const defaultData = await response.json();
           set(defaultData);
         }
       } else {
-        const response = await fetch('/data/user-progress.json');
+        const response = await fetch(`${BASE_URL}data/user-progress.json`);
         const defaultData = await response.json();
         set(defaultData);
       }
@@ -30,20 +32,20 @@ function createProgressStore() {
     // Save to localStorage and update store
     save(progress) {
       try {
-        localStorage.setItem('roeland-user-progress', JSON.stringify(progress));
+        localStorage.setItem("roeland-user-progress", JSON.stringify(progress));
         set(progress);
       } catch (e) {
-        console.error('Error saving progress:', e);
+        console.error("Error saving progress:", e);
       }
     },
 
     // Clear progress
     async clear() {
-      localStorage.removeItem('roeland-user-progress');
-      const response = await fetch('/data/user-progress.json');
+      localStorage.removeItem("roeland-user-progress");
+      const response = await fetch(`${BASE_URL}data/user-progress.json`);
       const defaultData = await response.json();
       set(defaultData);
-    }
+    },
   };
 }
 

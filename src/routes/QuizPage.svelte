@@ -4,6 +4,8 @@
   import Quiz from '../components/Quiz.svelte';
   import dataService from '../services/dataService.js';
 
+  const BASE_URL = import.meta.env.BASE_URL || "/";
+
   export let params = {};
 
   let quiz = null;
@@ -28,7 +30,7 @@
 
     try {
       // Load quiz data
-      const response = await fetch('/data/quizzes.json');
+      const response = await fetch(`${BASE_URL}data/quizzes.json`);
       const quizzesData = await response.json();
       quiz = quizzesData.quizzes.find(q => q.id === quizId);
 
